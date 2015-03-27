@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android" 
+		id="br.com.hotforms.facebookhash" 
+		version="1.0.0">
+	<name>FacebookHash</name>
+	<description>Facebook Hash for Android Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,facebook,android,hash,device,test</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/FacebookHash.js" name="FacebookHash">
+		<clobbers target="FacebookHash" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="FacebookHash">
+				<param name="android-package" value="br.com.hotforms.FacebookHash" />
+			</feature>
+		</config-file>
+	
+		<source-file src="src/android/FacebookHash.java" target-dir="src/br/com/hotforms/facebookhash" />
+	</platform>
+</plugin>
