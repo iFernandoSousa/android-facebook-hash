@@ -68,7 +68,7 @@ public class FacebookHash extends CordovaPlugin {
         final Activity activity = this.cordova.getActivity();
         final Window window = activity.getWindow();
         
-        if ("facebookhash".equals(action)) {
+        if ("getHash".equals(action)) {
         	try {
         		String packageName = activity.getClass().getPackage().getName();
         		PackageManager packageManager = activity.getPackageManager();
